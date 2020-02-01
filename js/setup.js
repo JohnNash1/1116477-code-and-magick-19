@@ -10,6 +10,7 @@ var NAMES = ['Иван', 'Хуан Себастьян', 'Мария', 'Крис�
 var SURNAMES = ['да Марья', 'Верон', 'Мирабелла', 'Вальц', 'Онопко', 'Топольницкая', 'Нионго', 'Ирвинг'];
 var COATS = ['rgb(101, 137, 164)', 'rgb(241, 43, 107)', 'rgb(146, 100, 161)', 'rgb(56, 159, 117)', 'rgb(215, 210, 55)', 'rgb(0, 0, 0)'];
 var EYES = ['black', 'red', 'blue', 'yellow', 'green'];
+var WIZARDS_AMOUNT = 4;
 
 var getRandomName = function (min, max) {
   var randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
@@ -28,7 +29,7 @@ var getRandomEyes = function (min, max) {
 
 var wizards = [];
 
-for (var i = 0; i < 4; i++) {
+for (var i = 0; i < WIZARDS_AMOUNT; i++) {
   wizards[i] = {
     name: getRandomName(0, 7),
     coatColor: getRandomCoat(0, 5),
