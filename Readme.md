@@ -1,7 +1,7 @@
 # Учебный проект «Код и Магия» [![Build status][travis-image]][travis-url]
 
 * Студент: [John Nash](https://up.htmlacademy.ru/javascript/19/user/1116477).
-* Наставник: `Неизвестно`.
+* Наставник: `Сергей Бородин`.
 
 ---
 
