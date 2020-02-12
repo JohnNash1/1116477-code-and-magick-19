@@ -9,6 +9,7 @@
   var setupClose = document.querySelector('.setup-close');
   var setupOpenIcon = document.querySelector('.setup-open-icon');
   var dialogHandle = setup.querySelector('.upload');
+  var form = setup.querySelector('.setup-wizard-form');
 
   var onPopupEscPress = function (evt) {
     window.util.isEscEvent(evt, closePopup);
@@ -93,4 +94,14 @@
   setupOpenIcon.addEventListener('keydown', onIconKeydown);
   setupClose.addEventListener('keydown', onCloseButtonKeydown);
   dialogHandle.addEventListener('mousedown', onDialogHandleMove);
+
+  var onSaveSuccess = function () {
+    setup.classList.add('hidden');
+  };
+
+  form.addEventListener('submit', function (evt) {
+    window.backend.save(new FormData(form), onSaveSuccess, window.setup.errorHandler);
+
+    evt.preventDefault();
+  });
 })();
